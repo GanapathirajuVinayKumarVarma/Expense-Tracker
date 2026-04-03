@@ -1,0 +1,323 @@
+/* Copy of style.css from HTML lab */
+:root {
+    --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-main: #ffffff;
+    --text-muted: #a0a0b0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-out;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    border: none;
+    padding: 12.8px 24px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.category-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 100px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    border-color: hsl(var(--secondary));
+}
+
+.input-field {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    padding: 12.8px;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 16px;
+    font-family: inherit;
+}
+
+.input-field:focus {
+    border-color: hsl(var(--primary));
+}
+
+option {
+    background: #1a1a2e;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+}
+
+.page-title {
+    margin: 32px 0;
+}
+
+.summary-panel {
+    padding: 24px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 14.4px;
+    margin-bottom: 6.4px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: hsl(var(--secondary));
+}
+
+.spending-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14.4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-panel {
+    padding: 32px;
+    margin-top: 32px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-clear {
+    background: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14.4px;
+}
+
+.category-item-wrapper {
+    position: relative;
+}
+
+.section-header {
+    margin-top: 32px;
+    text-align: left;
+}
+
+.expenses-list-container {
+    text-align: left;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.expenses-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.expenses-list-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.expenses-list-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+.expenses-list-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.expense-group {
+    margin-bottom: 24px;
+}
+
+.group-header {
+    color: hsl(var(--secondary));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-total {
+    font-size: 12.8px;
+    opacity: 0.7;
+}
+
+.expense-item {
+    padding: 12.8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: none;
+}
+
+.expense-info {
+    flex: 1;
+}
+
+.expense-title {
+    color: var(--text-main);
+    font-size: 16px;
+}
+
+.expense-date {
+    color: var(--text-muted);
+    font-size: 12.8px;
+}
+
+.expense-amount-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    font-size: 17.6px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--bg-gradient);
+    padding: 32px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Chart Styles */
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.chart-wrapper {
+    flex: 1 1 300px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid var(--glass-border);
+    min-width: 300px;
+}

@@ -1,0 +1,54 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Food"
+        },
+        {
+            "id": 2,
+            "name": "Entertainment"
+        },
+        {
+            "id": 3,
+            "name": "Household Expenses"
+        },
+        {
+            "id": 4,
+            "name": "Travel"
+        }
+    ],
+    "expenses": [
+        {
+            "id": 1,
+            "category_id": 1,
+            "category_name": "Food",
+            "reason": "Lunch",
+            "amount": 1000,
+            "date": "2026-03-15"
+        },
+        {
+            "id": 3,
+            "category_id": 3,
+            "category_name": "Household Expenses",
+            "reason": "Groceries",
+            "amount": 5000,
+            "date": "2026-03-01"
+        },
+        {
+            "id": 4,
+            "category_id": 2,
+            "category_name": "Entertainment",
+            "reason": "Trip",
+            "amount": 10000,
+            "date": "2026-03-24"
+        },
+        {
+            "id": 5,
+            "category_id": 1,
+            "category_name": "Food",
+            "reason": "Lunch during trip",
+            "amount": 5000,
+            "date": "2026-03-25"
+        }
+    ]
+}
